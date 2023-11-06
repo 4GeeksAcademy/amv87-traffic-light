@@ -13,8 +13,6 @@ const TrafficLight = () => {
 	const [purpleShadowLight, setPurpleShadowLight ] = useState('none');
 	
 	function changeRedLight() {
-		setRedLight("red")
-		setRedShadowLight("lightyellow 0px 0px 50px 50px")
 		if (redLight === 'red') {
 			setRedLight("#671b1b")
 			setRedShadowLight("none")
@@ -30,8 +28,6 @@ const TrafficLight = () => {
 		}
 	}
 	function changeYellowLight() {
-		setYellowLight("yellow")
-		setYellowShadowLight("lightyellow 0px 0px 50px 50px")
 		if (yellowLight === 'yellow') {
 			setYellowLight("#515118")
 			setYellowShadowLight("none")
@@ -47,8 +43,6 @@ const TrafficLight = () => {
 		}
 	}
 	function changeGreenLight() {
-		setGreenLight("green")
-		setGreenShadowLight("lightyellow 0px 0px 50px 50px")
 		if (greenLight === 'green') {
 			setGreenLight("#1d4d1d")
 			setGreenShadowLight("none")
@@ -64,8 +58,6 @@ const TrafficLight = () => {
 		}
 	}
 	function addPurple() {
-		setNewColor('block')
-		setNewColorLabel('New Color')
 		if (newColor === 'block') {
 			setNewColor('none')
 			setNewColorLabel('New Color')
@@ -75,8 +67,6 @@ const TrafficLight = () => {
 		}
 	}
 	function changePurpleLight() {
-		setPurpleLight("purple")
-		setPurpleShadowLight("lightyellow 0px 0px 50px 50px")
 		if (purpleLight === 'purple') {
 			setPurpleLight("##491a49")
 			setPurpleShadowLight("none")
