@@ -93,17 +93,25 @@ const TrafficLight = () => {
 	}
 	return (
 		<div className="container" >
-			<div className="row d-flex justify-content-center" >
-				<div className="d-flex align-items-center bg-black justify-content-center" style={{width: '3rem', height:'6rem'}}></div>
-			</div>
-			<div className="row d-flex justify-content-center" >
-				<div className="d-flex align-items-center py-3 mb-3 rounded-5 bg-black justify-content-center flex-column" style={{width: '18rem', height:'auto'}}>
-					<div onClick={changeRedLight} className="btn rounded-circle" style={{width: '12rem', height:'12rem', boxShadow:redShadowLight, backgroundColor:redLight}}></div>
-					<div onClick={changeYellowLight} className="btn rounded-circle" style={{width: '12rem', height:'12rem', boxShadow:yellowShadowLight, backgroundColor:yellowLight}}></div>
-					<div onClick={changeGreenLight} className="btn rounded-circle" style={{width: '12rem', height:'12rem', boxShadow:greenShadowLight, backgroundColor:greenLight}}></div>
-					<div onClick={changePurpleLight} className="btn rounded-circle" style={{width: '12rem', height:'12rem', boxShadow:purpleShadowLight, backgroundColor: purpleLight, display:newColor}}></div>
+			<div className="row justify-content-center">
+				<div className="col-md-6">
+					<div className="row d-flex justify-content-center" >
+						<div className="d-flex align-items-center bg-black justify-content-center" style={{width: '3rem', height:'6rem'}}></div>
+					</div>
+					<div className="row d-flex justify-content-center" >
+						<div className="d-flex align-items-center py-3 mb-3 rounded-5 bg-black justify-content-center flex-column" style={{width: '18rem', height:'auto'}}>
+							<div onClick={changeRedLight} className="btn rounded-circle" style={{width: '12rem', height:'12rem', boxShadow:redShadowLight, backgroundColor:redLight}}></div>
+							<div onClick={changeYellowLight} className="btn rounded-circle" style={{width: '12rem', height:'12rem', boxShadow:yellowShadowLight, backgroundColor:yellowLight}}></div>
+							<div onClick={changeGreenLight} className="btn rounded-circle" style={{width: '12rem', height:'12rem', boxShadow:greenShadowLight, backgroundColor:greenLight}}></div>
+							<div onClick={changePurpleLight} className="btn rounded-circle" style={{width: '12rem', height:'12rem', boxShadow:purpleShadowLight, backgroundColor: purpleLight, display:newColor}}></div>
+						</div>
+					</div>
 				</div>
-				<button type="button" onClick={addPurple} class="btn btn-primary">{newColorLabel}</button>
+				<div className="col-md-6 d-flex align-items-start justify-content-center mt-5 py-5">
+					<div class="d-grid gap-2 col-6 mx-auto">
+						<button type="button" onClick={addPurple} class="btn btn-success">{newColorLabel}</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
