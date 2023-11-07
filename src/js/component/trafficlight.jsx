@@ -11,6 +11,7 @@ const TrafficLight = () => {
 	const [newColorLabel, setNewColorLabel ] = useState('Add Color');
 	const [purpleLight, setPurpleLight ] = useState('#491a49');
 	const [purpleShadowLight, setPurpleShadowLight ] = useState('none');
+	const [cycleColors, setCycleColors ] = useState('none');
 	
 	function changeRedLight() {
 		if (redLight === 'red') {
@@ -81,6 +82,17 @@ const TrafficLight = () => {
 			setGreenShadowLight("none")
 		}
 	}
+	function changeBetweenColors() {
+		if (cycleColors==='none') {
+			setCycleColors(changeRedLight)
+		} else if (redLight === 'red') {
+			setCycleColors(changeYellowLight)
+		} else if (yellowLight === 'yellow') {
+			setCycleColors(changeGreenLight)
+		} else {
+			setCycleColors(changeRedLight)
+		}
+	}
 	return (
 		<div className="container" >
 			<div className="row justify-content-center">
@@ -98,9 +110,9 @@ const TrafficLight = () => {
 					</div>
 				</div>
 				<div className="col-md-6 d-flex align-items-start justify-content-center mt-5 py-5">
-					<div class="d-grid gap-2 col-6 mx-auto">
-						<button type="button" onClick={addPurple} class="btn btn-success">{newColorLabel}</button>
-						<button type="button" onClick={setInterval} class="btn btn-warning mt-4">Cycle Lights</button>
+					<div className="d-grid gap-2 col-6 mx-auto">
+						<button type="button" onClick={addPurple} className="btn btn-success">{newColorLabel}</button>
+						<button type="button" onClick={changeBetweenColors} className="btn btn-warning mt-4">Change Between Colors</button>
 					</div>
 				</div>
 			</div>
