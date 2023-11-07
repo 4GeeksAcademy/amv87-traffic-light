@@ -100,6 +100,7 @@ const TrafficLight = () => {
 				<div className="col-md-6 d-flex align-items-start justify-content-center mt-5 py-5">
 					<div class="d-grid gap-2 col-6 mx-auto">
 						<button type="button" onClick={addPurple} class="btn btn-success">{newColorLabel}</button>
+						<button type="button" onClick={setInterval} class="btn btn-warning mt-4">Cycle Lights</button>
 					</div>
 				</div>
 			</div>
