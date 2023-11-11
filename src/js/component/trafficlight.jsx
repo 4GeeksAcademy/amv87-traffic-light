@@ -93,6 +93,7 @@ const TrafficLight = () => {
 			setCycleColors(changeRedLight)
 		}
 	}
+	
 	return (
 		<div className="container" >
 			<div className="row justify-content-center">
@@ -111,8 +112,9 @@ const TrafficLight = () => {
 				</div>
 				<div className="col-md-6 d-flex align-items-start justify-content-center mt-5 py-5">
 					<div className="d-grid gap-2 col-6 mx-auto">
-						<button type="button" onClick={addPurple} className="btn btn-success">{newColorLabel}</button>
+						<button type="button" onClick={addPurple} className="btn btn-danger">{newColorLabel}</button>
 						<button type="button" onClick={changeBetweenColors} className="btn btn-warning mt-4">Change Between Colors</button>
+						<button type="button" onClick={discoMode} className="btn btn-success mt-4">Disco Mode</button>
 					</div>
 				</div>
 			</div>
