@@ -114,7 +114,6 @@ const TrafficLight = () => {
 					<div className="d-grid gap-2 col-6 mx-auto">
 						<button type="button" onClick={addPurple} className="btn btn-danger">{newColorLabel}</button>
 						<button type="button" onClick={changeBetweenColors} className="btn btn-warning mt-4">Change Between Colors</button>
-						<button type="button" onClick='' className="btn btn-success mt-4">Disco Mode</button>
 					</div>
 				</div>
 			</div>
